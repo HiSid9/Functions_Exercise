@@ -1,3 +1,7 @@
+/*
+Xu Zhou
+Jun 17
+*/
 // This function returns a random number between (and including both) minimum and maximum
 function getRandomInteger (minimum, maximum) {
   minimum = Math.ceil(minimum) // minimum is inclusive
@@ -5,20 +9,48 @@ function getRandomInteger (minimum, maximum) {
   return Math.floor(Math.random() * (maximum - minimum)) + minimum
 }
 
+// hello it's me
+
+
+// cool I am also me!
+let s = {name: 'Tony',address:'Sussex Drive'}
+
 // Povided Arrays
-const nouns = ['dragons', 'toasters']
+const nouns = ['dragons', 'toasters','cars','leek','tomato','bitter gourd','pumpkin','celery','ginger','pea']
 
-const verbs = ['walked', 'ran']
+const verbs = ['walked', 'ran','absorb','abound','advise','help','live','fly','feel','wait']
 
-const adverbs = ['menacingly', 'intentionally']
+const adverbs = ['menacingly', 'intentionally','simply','likely','always','especially','finally','daily','highly','fairly']
 
-const adjectives = ['wild', 'slippery']
+const adjectives = ['wild', 'slippery','beautiful','wonderful','lovely','brave','helpful','honey','useful','romantic']
 
 const proNouns = ['they', 'we', 'you', 'he', 'she', 'I', 'it']
 
-const openings = ['Once upon a time', 'I watched']
+const openings = ['Once upon a time', 'I watched','lead into','one morning','opening','begin','start','hello','open','pam']
 
-const closings = ['with extra cheese', 'the end']
+const closings = ['with extra cheese', 'the end','good night','finsh','closure','termination','end','goodbye','see you','over']
+
+function createRandomSentence(){
+  const randomSentence = nouns [ getRandomInteger(0, nouns.length - 1)] +' '+
+  verbs[getRandomInteger(0, verbs.length - 1)]+ ' '+
+  adverbs[getRandomInteger(0, adverbs.length - 1)]+ ' '+
+  adjectives[getRandomInteger(0, adjectives.length - 1)]+' '+
+  proNouns[getRandomInteger(0,proNouns.length - 1)]+' '+
+  openings[getRandomInteger(0,openings.length - 1)]+' '+
+  closings[getRandomInteger(0, closings.length - 1)]+' '+
+  return randomSentence
+}
+
+function outputSentence(sentence){
+ console.log(sentence)
+ console.log('\n')
+}
+
+for(let i = 0; i < numberOfSentences; i++){
+  outputSentence(creteRandomSentence())
+  }
+const numberOfSentences = 10
+
 
 // Instructions:
 
@@ -79,3 +111,55 @@ const closings = ['with extra cheese', 'the end']
 
 // Submission
 // Submit your GitHub repo URL through the LMS.
+
+// pseudo code:
+
+// add the words to arrays
+
+// Create a function that creates a ranmdom sentence
+// Doers this function require any parameters: no
+// Does this function need to return anything: yes a new random sentence
+// how do you create a random sentence?
+
+// Create a function that outputs some text
+// Does function require any parameters: yes to text to output
+// Does this function need to return anything: no
+
+//execute a loop 
+
+
+
+function createRandomSentence(){
+  const randomSentence = openings[ getRandomInteger(0, openings.length -1)]
+
+// random adjective
+adjectives[getRandomInteger(0, adjective.length -1)]+' '
+
+// random noun
+// add random pro_noun
+// add random adverb // mayber a comma not a space
+// add random ending // period at the end
+
+
+// return this new random sentence
+  return randomSentence
+
+}
+
+
+function outputSentence( sentence){
+  console.log(sentence)
+}
+
+const numberOfSentences = 20
+
+for(let i = 0; i < numberOfSentences; i++){
+ // let randomSentence = createRandomSentence()
+ // outputSentence(randomSentence)
+
+  outputSentence(createRandomSentence())
+}
+
+
+
+
